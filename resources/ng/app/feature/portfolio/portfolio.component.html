@@ -1,0 +1,48 @@
+<div class="relative z-0 bg-stone-800 ">
+    <app-navbar />
+    <section appParalax [pRatio]="parallaxValue(1)" class="w-full h-screen z-[auto]" id="hero">
+        <div class="flex flex-col text-white itens-center justify-center h-full w-full [&>*]:mx-auto">
+            <h1 class="text-4xl mx-auto">Stephan Munde</h1>
+            <span class="text-gray-400">Brings solutions to your problems</span>
+            <p class="mt-6">I am a fullstack software development with skills focused on web development</p>
+        </div>
+    </section>
+    <section appParalax [pRatio]="parallaxValue(2)" [pTop]="scroll > viewHeight && scroll < 2*viewHeight ? -viewHeight : 0" class="w-full h-screen z-auto relative overflow-auto" id="works">
+        <div class="flex flex-col gap-4 text-white itens-center justify-center h-full w-full [&>*]:mx-auto">
+            <div class="flex flex-col items-center justify-center">
+                <h1 class="text-4xl mx-auto">My Works</h1>
+                <span class="text-gray-400">Collaborations and personal projects</span>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto">
+                <app-work *ngFor="let work of works$ | async" [work]="work" class="mx-auto text-red-500"></app-work>
+            </div>
+        </div>
+    </section>
+    <section appParalax [pRatio]="parallaxValue(3)" [pTop]="scroll > 2*viewHeight && scroll < 3*viewHeight ? -2*viewHeight : 0" class="w-full h-screen relative z-auto overflow-auto" id="experiences">
+        <div class="flex flex-col text-white itens-center justify-center h-full w-full [&>*]:mx-auto">
+            <h1 class="text-4xl mx-auto">Experiences</h1>
+            <span class="text-gray-400">Professional journey</span>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-y-4 p-4 container mx-auto">
+                <app-skill *ngFor="let progress of skills$ | async | keyvalue; " [progress]="progress.value" [label]="progress.key" class="mx-auto text-red-500"></app-skill>
+            </div>
+        </div>
+    </section>
+    <section class="w-full h-screen relative z-auto" id="feedbacks">
+        <div class="flex flex-col text-white itens-center justify-center h-full w-full [&>*]:mx-auto">
+            <h1 class="text-4xl mx-auto">FeedBacks</h1>
+            <span class="text-gray-400">Customers' point of view</span>
+        </div>
+    </section>
+
+    <div class="navigation !hidden md:!flex">
+        <button class="navigation-button" [ngClass]="{'navigation-button--active' : anchor$.value == 'hero' }" (click)="anchor$.next('hero')">About Me</button>
+        <button class="navigation-button" [ngClass]="{'navigation-button--active' : anchor$.value == 'works' }" (click)="anchor$.next('works')">Works</button>
+        <button class="navigation-button" [ngClass]="{'navigation-button--active' : anchor$.value == 'experiences' }" (click)="anchor$.next('experiences')">Experience</button>
+        <button class="navigation-button" [ngClass]="{'navigation-button--active' : anchor$.value == 'feedbacks' }" (click)="anchor$.next('feedbacks')">Feedbacks</button>
+    </div>
+
+    <div class="navigation !flex md:!hidden">
+        <button class="navigation-button" [ngClass]="{'navigation-button--active' : anchor$.value == 'hero' }" (click)="anchor$.next(anchors[anchorIndex.up])">UP</button>
+        <button class="navigation-button" [ngClass]="{'navigation-button--active' : anchor$.value == 'feedbacks' }" (click)="anchor$.next(anchors[anchorIndex.down])">Down</button>
+    </div>
+</div>

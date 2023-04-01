@@ -1,0 +1,3 @@
+#+title:Minister's Portfolio
+#+description: This Project is Stephan Munde's Portfolio
+#+author:Minister

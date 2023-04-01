@@ -1,0 +1,19 @@
+.navigation {
+    @apply  fixed right-10 top-1/2 -translate-y-1/2 flex flex-col gap-2;
+
+    & .navigation-button {
+        @apply rounded-full text-amber-800/70 hover:text-red-600/80 gap-8 flex items-center justify-end text-3xl mix-blend-overlay transition-all duration-500;
+    }
+
+    & .navigation-button--active {
+        @apply text-red-600 text-4xl;
+    }
+}
+
+section {
+    @apply max-h-screen overflow-auto sm:container mx-auto;
+
+    &:nth-of-type(n+2) {
+        @apply pt-24 pb-4;
+    }
+}

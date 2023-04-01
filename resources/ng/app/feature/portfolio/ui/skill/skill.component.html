@@ -1,0 +1,6 @@
+<svg [attr.viewBox]="viewBox"  class="skill" [attr.width]="size" [attr.height]="size">
+    <circle [attr.cx]="center" [attr.cy]="center" [attr.r]="radius"  class="skill__progress-track"></circle>
+    <circle [attr.cx]="center" [attr.cy]="center" [attr.r]="radius" [attr.stroke-width]="strokeWidth" class="skill__progress-indicator" [attr.transform]="transform" [style]="{ strokeDashoffset: dashOffset, strokeDasharray: dashArray  }"></circle>
+    <text [attr.x]="center" [attr.y]="center" font-size="1em" alignment-base="middle" text-anchor="middle" class="fill-white font-bold">{{ progress }}</text>
+    <text [attr.x]="center" [attr.y]="center + (15 / 100) * size" font-size=".6em" text-anchor="middle" class="fill-white" >{{ label }}</text>
+</svg>

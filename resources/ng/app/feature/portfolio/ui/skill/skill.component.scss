@@ -1,0 +1,13 @@
+.skill {
+    @apply h-36 w-36 hover:scale-110 cursor-pointer relative;
+
+    &__progress-track {
+        @apply fill-none stroke-stone-600;
+    }
+
+    &__progress-indicator {
+        @apply stroke-orange-600 fill-none transition-[stroke-dashoffset] duration-[3s] ease-in-out;
+
+        stroke-linecap: round;
+    }
+}
