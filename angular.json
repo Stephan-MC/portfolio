@@ -16,7 +16,7 @@
       },
       "root": "",
       "sourceRoot": "resources/ng",
-      "prefix": "app",
+      "prefix": "portfolio",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
