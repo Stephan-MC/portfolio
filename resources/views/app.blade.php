@@ -13,9 +13,9 @@
 <body>
     <app-root></app-root>
     @foreach(['runtime.js', 'polyfills.js', 'vendor.js', 'main.js'] as $file)
-    @if ($file = collect(glob('build/' . str($file)->replaceLast('.', '*')))->first())
-    <script type="module" src="{{ $file }}"></script>
-    @endif
+        @if ($file = collect(glob('build/' . str($file)->replaceLast('.', '*')))->first())
+            <script type="module" src="{{ $file }}"></script>
+        @endif
     @endforeach
 </body>
 
