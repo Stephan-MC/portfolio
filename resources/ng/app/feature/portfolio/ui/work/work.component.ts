@@ -8,9 +8,10 @@ export interface Work {
 }
 
 @Component({
-  selector: 'app-work',
-  templateUrl: './work.component.html',
-  styleUrls: ['./work.component.scss']
+    selector: 'app-work',
+    templateUrl: './work.component.html',
+    styleUrls: ['./work.component.scss'],
+    standalone: true
 })
 export class WorkComponent {
   @Input() work!: Work;

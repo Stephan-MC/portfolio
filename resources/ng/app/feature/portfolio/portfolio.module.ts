@@ -14,20 +14,18 @@ import { SkillComponent } from './ui/skill/skill.component';
 
 
 @NgModule({
-  declarations: [
-    PortfolioComponent,
-    WorkComponent,
-    TechComponent,
-    ExperienceComponent,
-    FeedbackComponent,
-    FeedbacksComponent,
-    NavbarComponent,
-    ParalaxDirective,
-    SkillComponent
-  ],
-  imports: [
-    CommonModule,
-    PortfolioRoutingModule
-  ]
+    imports: [
+        CommonModule,
+        PortfolioRoutingModule,
+        PortfolioComponent,
+        WorkComponent,
+        TechComponent,
+        ExperienceComponent,
+        FeedbackComponent,
+        FeedbacksComponent,
+        NavbarComponent,
+        ParalaxDirective,
+        SkillComponent
+    ]
 })
 export class PortfolioModule { }

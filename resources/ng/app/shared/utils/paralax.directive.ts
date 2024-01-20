@@ -1,7 +1,8 @@
 import { Directive, HostListener, Input, ElementRef, ViewContainerRef } from '@angular/core';
 
 @Directive({
-  selector: '[appParalax]'
+    selector: '[appParalax]',
+    standalone: true
 })
 export class ParalaxDirective {
   @Input() root!: any

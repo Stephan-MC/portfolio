@@ -1,12 +1,17 @@
 import { Component, HostListener } from '@angular/core';
-import { ViewportScroller } from '@angular/common'
+import { ViewportScroller, NgFor, NgClass, AsyncPipe, KeyValuePipe } from '@angular/common'
 import { BehaviorSubject, interval, of, throttle, debounce, Observable, map } from 'rxjs'
-import { Work } from './ui/work/work.component'
+import { Work, WorkComponent } from './ui/work/work.component'
+import { SkillComponent } from './ui/skill/skill.component';
+import { ParalaxDirective } from '../../shared/utils/paralax.directive';
+import { NavbarComponent } from '../../shared/ui/navbar/navbar.component';
 
 @Component({
-  selector: 'app-portfolio',
-  templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.scss']
+    selector: 'app-portfolio',
+    templateUrl: './portfolio.component.html',
+    styleUrls: ['./portfolio.component.scss'],
+    standalone: true,
+    imports: [NavbarComponent, ParalaxDirective, NgFor, WorkComponent, SkillComponent, NgClass, AsyncPipe, KeyValuePipe]
 })
 export class PortfolioComponent {
   viewHeight: number = 0
