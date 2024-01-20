@@ -9,10 +9,10 @@
     "test": "ng test"
   },
   "devDependencies": {
-    "@angular/cli": "~16.2.11",
-    "@angular/compiler-cli": "^16.2.12",
+    "@angular/cli": "~17.1.0",
+    "@angular/compiler-cli": "^17.1.0",
     "@angular/language-server": "^15.2.0",
-    "@angular/language-service": "16.2.12",
+    "@angular/language-service": "17.1.0",
     "@types/jasmine": "~4.3.0",
     "autoprefixer": "10.4.14",
     "axios": "^1.1.2",
@@ -25,24 +25,24 @@
     "laravel-vite-plugin": "^0.7.2",
     "postcss": "8.4.21",
     "tailwindcss": "3.2.7",
-    "typescript": "~4.9.5",
+    "typescript": "~5.3.3",
     "vite": "^4.0.0"
   },
   "dependencies": {
-    "@angular-devkit/build-angular": "^16.2.11",
-    "@angular/animations": "^16.2.12",
-    "@angular/common": "^16.2.12",
-    "@angular/compiler": "^16.2.12",
-    "@angular/core": "^16.2.12",
-    "@angular/forms": "^16.2.12",
-    "@angular/platform-browser": "^16.2.12",
-    "@angular/platform-browser-dynamic": "^16.2.12",
-    "@angular/router": "^16.2.12",
+    "@angular-devkit/build-angular": "^17.1.0",
+    "@angular/animations": "^17.1.0",
+    "@angular/common": "^17.1.0",
+    "@angular/compiler": "^17.1.0",
+    "@angular/core": "^17.1.0",
+    "@angular/forms": "^17.1.0",
+    "@angular/platform-browser": "^17.1.0",
+    "@angular/platform-browser-dynamic": "^17.1.0",
+    "@angular/router": "^17.1.0",
     "@types/three": "0.149.0",
     "rxjs": "~7.8.0",
     "sass": "^1.59.2",
     "three": "0.150.1",
     "tslib": "^2.3.0",
-    "zone.js": "~0.13.3"
+    "zone.js": "~0.14.3"
   }
 }
